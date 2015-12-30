@@ -1,0 +1,60 @@
+body {
+	background-color: black;
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	margin-top: 0px;
+	font-size: 1.2em;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+hr {
+	width: 15px;
+	height: 100%;
+	left: 7%;
+	background-color:	white;
+	position: absolute;
+	margin-top: 0px;
+}
+
+#content {
+	width: 400px;
+	height: 400px;
+	margin:-200px 0 0 -200px;
+	left: 50%;
+	color:	white;
+	top: 50%;
+	position: absolute;
+	text-align: center;
+}
+
+ul {
+	width: 400px;
+	right: 43px;
+	position: absolute;
+}
+
+li {
+	display: inline;
+	margin-top: 3px;
+	margin: 10px;
+}
+
+img	{
+	width: 85px;
+}
+
+#mailbox {
+	width: 115px;
+	height: 142px;
+	bottom: -22px;
+	position: absolute;
+	margin-left: -12px; 
+}
+
+#linked {
+	border: 5px solid white;
+	height:	78px;
+}
