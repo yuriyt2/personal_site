@@ -17,8 +17,8 @@ body {
 	position: absolute;
 	text-align: center;
 	opacity: 0;
-	animation: backcolor 3000ms;
-	animation-delay: 1000ms;
+	animation: backcolor 2000ms;
+	animation-delay: 500ms;
 	animation-fill-mode: forwards;
 	transition: 800ms ease-in-out;
 }
@@ -39,8 +39,8 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	opacity: 0;
-	animation: backcolor 2500ms;
-	animation-delay: 200ms;
+	animation: backcolor 1500ms;
+	animation-delay: 100ms;
 	animation-fill-mode: forwards;
 }
 h3 {
