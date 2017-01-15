@@ -13,7 +13,7 @@ body {
 	margin:-400px 0 0 -400px;
 	left: 50%;
 	color:	white;
-	top: 50%;
+	top: 40%;
 	position: absolute;
 	text-align: center;
 	opacity: 0;
@@ -43,14 +43,18 @@ body {
 	animation-delay: 200ms;
 	animation-fill-mode: forwards;
 }
-
+h3 {
+  margin-bottom: -5px;
+  margin-top: -5px;
+}
 .content {
   text-align: left;
+  margin-top: 70px;
 }
 ul {
   padding: 0;
-  margin-right: -50px
-
+  margin-right: -50px;
+  margin-bottom: -8px;
 }
 .entry {
   display: inline;
