@@ -140,9 +140,6 @@ img	{
 .projects-list>li:hover  .project-title {
 	opacity: 1;
 }
-/*.project-title:hover {
-	opacity: 1;
-}*/
 
 @media (max-width: 1190px) {
 	.projects-list>li>a>img {

@@ -1,0 +1,85 @@
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+  margin-top: 0px;
+  font-size: 1.2em;
+}
+
+.container {
+  width: 800px;
+	height: 800px;
+	margin:-400px 0 0 -400px;
+	left: 50%;
+	color:	white;
+	top: 50%;
+	position: absolute;
+	text-align: center;
+	opacity: 0;
+	animation: backcolor 3000ms;
+	animation-delay: 1000ms;
+	animation-fill-mode: forwards;
+	transition: 800ms ease-in-out;
+}
+@keyframes backcolor {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100;
+	}
+}
+#hr {
+	width: 15px;
+	height: 100%;
+	left: 7%;
+	background-color:	white;
+	position: absolute;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	opacity: 0;
+	animation: backcolor 2500ms;
+	animation-delay: 200ms;
+	animation-fill-mode: forwards;
+}
+
+.content {
+  text-align: left;
+}
+ul {
+  padding: 0;
+  margin-right: -50px
+
+}
+.entry {
+  display: inline;
+  position: relative;
+}
+.entry>a>img {
+  filter: grayscale(100%);
+  width: 383px;
+  height: 180px;
+  border: 4px double rgba(255, 255, 255, 0.4);
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+.entry>a>span {
+  opacity: 0;
+  position:absolute;
+  bottom: 90px;
+  margin-left: -290px;
+  width: 250px;
+  z-index: 2;
+  color: white;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.entry:hover a>img {
+	opacity: .3;
+}
+
+.entry:hover  .label {
+	opacity: 1;
+}
