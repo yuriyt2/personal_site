@@ -6,6 +6,11 @@ body {
   margin-top: 0px;
   font-size: 1.2em;
 }
+.home-button {
+  text-decoration: none;
+  color: white;
+  font-size: 2.2em;
+}
 
 .container {
   width: 800px;
