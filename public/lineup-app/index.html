@@ -36,6 +36,28 @@
         border-radius: 8px;
         padding: 7px;
       }
+      .help {
+        background-color: rgba(39, 57, 75, .93);
+        color: rgb(200, 200, 200);
+        position: fixed;
+        top: 5.6%;
+        right: 6%;
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+        height: 620px;
+        z-index: 30;
+        font-size: .85em;
+        padding: 15px;
+        border: 3px solid gray;
+        border-radius: 10px;
+      }
+      .help>p>a {
+        color: rgb(160, 160, 160);
+      }
+      .help>h4 {
+        text-decoration: underline;
+      }
       .close {
         float: right;
         padding-top: 1px;
@@ -173,6 +195,12 @@
         .menu-bar {
           width: 825px;
         }
+
+        .help {
+          height: 480px;
+          width: 420px;
+          font-style: .8em;
+        }
       }
 
     </style>
@@ -180,9 +208,9 @@
 
   <body>
     <div class="menu-bar">
-      <button type="button" id="edit-info">Edit Formation</button>
+      <button type="button" id="edit-info">Edit Format</button>
       <button type="button" id="help">Help</button>
-      <button type="button" id="about">About</button>
+      <button type="button" id="about"><a href="https://github.com/yuriyt2/personal_site/tree/master/public/lineup-app"></a>What Is This?</button>
       <a href="mailto:yuriy.turetskiy@gmail.com"><button type="button" id="contact">Contact</button></a>
     </div>
     <div class="outer-div">
@@ -248,7 +276,34 @@
         <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
       </ul>
     </div>
+    <div class="help" style="display:none;">
+      <span class="close">x</span>
+      <h4>Step 1</h4>
+      <p>
+        Select your game format (5-a-side - 11-a-side) and edit team name.
+      </p>
+      <h4>Step 2</h4>
+      <p>
+        Select the number of substitutes you will have on your bench (0-9).
+      </p>
+      <h4>Step 3</h4>
+      <p>
+        Click on each player to change their image or click "auto" to fill with stock images.  Custome images should be cropped to a square (lengthshould be equal to width).
+      </p>
+      <h4>Step 4</h4>
+      <p>
+        Drag each player to desired location to change formation.
+      </p>
+      <h4>Step 5</h4>
+      <p>
+        Close the setup box by clicking the "x" and take a screenshot.
+      </p>
+      <h4>Notes</h4>
+      <p>
+        To replace the field image or replace blank image with images of your players you may download the source code <a href="https://github.com/yuriyt2/personal_site/tree/master/public/lineup-app">here</a>.
+      </p>
     </div>
+  </div>
 
 
     <script type="text/javascript">
@@ -343,12 +398,23 @@
     $(".close").click(function(){
       var clicked = this
       $($(clicked).parent()).hide()
+      $("#help").css("background-color","buttonface");
     })
     // open setup (edit formation)
     $("#edit-info").click(function(){
       $(".setup").show()
     })
-
+    // help
+    // $(".help").hide();
+    $("#help").click(function(){
+      if ($(".help").is(':visible')) {
+        $(".help").hide();
+        $("#help").css("background-color","buttonface");
+      }else{
+        $(".help").show();
+        $("#help").css("background-color","rgb(120,120,120)");
+      }
+    })
 
     </script>
     <script type="text/javascript">

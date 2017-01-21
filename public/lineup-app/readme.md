@@ -23,7 +23,7 @@
 + Open license images
 
 ### Deployment URL
--[Lineup App](http://yuriyturetskiy.com/lineup-app)-
+[Lineup App](http://yuriyturetskiy.com/lineup-app)
 
 ### Setup
 To test the app out locally:
