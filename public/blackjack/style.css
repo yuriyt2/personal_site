@@ -1,0 +1,219 @@
+body {
+  background: url(images/back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: Tahoma, Geneva, sans-serif;
+
+}
+
+.cat  {
+height: 250px;
+position: relative;
+left: 470px;
+top: 75px;
+z-index: 1
+
+}
+
+.table {
+  height: 350px;
+  position: relative;
+  left: 200px;
+  top: 300px;
+}
+
+.card {
+  height: 100px;
+  width: 70px;
+  font-size: 44px;
+  background-color: white;
+  border: 2px solid black;
+  text-align: center;
+  line-height: 80px;
+  font-family: Impact, Charcoal, sans-serif;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.hidden {
+  content:url(images/cardback.gif);
+  padding: -2px;
+
+}
+
+
+
+#dealer-hand {
+    height: 20px;
+    width: 120px;
+    right: 260px;
+    top: 180px;
+    position: absolute;
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    font-size: 16px;
+    padding-top: 4px;
+}
+
+#dealer-card1 {
+  right: 315px;
+  top: 230px;
+}
+#dealer-card2 {
+  right: 255px;
+  top: 235px;
+}
+#dealer-card3 {
+  right: 195px;
+  top: 240px;
+}
+#dealer-card4 {
+  right: 135px;
+  top: 245px;
+}
+#dealer-card5 {
+  right: 75px;
+  top: 250px;
+}
+#dealer-card6 {
+  right: 15px;
+  top: 255px;
+}
+
+
+
+
+
+#your-hand {
+    height: 20px;
+    width: 120px;
+    left: 90px;
+    top: 350px;
+    position: absolute;
+    display: block;
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+    padding-top: 4px;
+}
+
+#your-card1 {
+  left: 90px;
+  top: 390px;
+}
+#your-card2 {
+  left: 155px;
+  top: 395px;
+}
+#your-card3 {
+  left: 220px;
+  top: 400px;
+}
+#your-card4 {
+  left: 285px;
+  top: 405px;
+}
+#your-card5 {
+  left: 350px;
+  top: 410px;
+}
+#your-card6 {
+  left: 415px;
+  top: 415px;
+}
+
+
+#chip-count {
+    height: 22px;
+    width: 100px;
+    left: 80px;
+    top: 60px;
+    position: absolute;
+    display: block;
+    border: 2px solid black;
+    background-color: #837E7C;
+    text-align: right;
+    padding-right: 5px;
+    padding-top: 4px;
+}
+
+#chipstack {
+    height: 22px;
+    width: 40px;
+    left: 187px;
+    top: 60px;
+    position: absolute;
+    display: block;
+    border: 2px solid black;
+    background-color: #837E7C;
+    color: gold;
+    text-align: center;
+    padding-top: 4px;
+}
+
+#console {
+  height: 80px;
+  width: 240px;
+  position: absolute;
+  right: 60px;
+  bottom: 60px;
+  color: gray;
+  background-color: #B6B6B4;
+  border-radius: 10px;
+  border: 3px solid black;
+  text-align: center;
+  padding: 12px;
+  font-size: 1.4em;
+}
+
+
+/*********************************BUTTONS**********************************/
+/*These buttoms came from a button generating site, then I placed them*/
+
+.myButton {
+	background-color:#2766d1;
+	-moz-border-radius:28px;
+	-webkit-border-radius:28px;
+	border-radius:28px;
+	border:3px solid #0c0c0d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Verdana;
+	font-size:13px;
+	padding:9px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+
+}
+.myButton:hover {
+	background-color:#3d7dcc;
+}
+
+#buttons {
+  width: 400px;
+  height: 80px;
+  display: inline;
+  margin: 1px;
+  position: absolute;
+  top: 90px;
+  left: 0px;
+}
+#buttons >ul>li {
+  display: inline;
+  margin: 5px;
+}
+
+
+
+/*
+SECRETS*/
+
+#pony {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
