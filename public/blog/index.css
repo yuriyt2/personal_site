@@ -129,7 +129,11 @@ ul {
     top: 10%;
   }
   .entry>a>img {
-    width: 245px;
+    width: 255px;
     height: 145px;
+  }
+  .entry>a>span {
+    margin-left: -82%;
+    width: 175pxx;
   }
 }
