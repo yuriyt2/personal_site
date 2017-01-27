@@ -18,7 +18,7 @@ body {
 	margin:-400px 0 0 -400px;
 	left: 50%;
 	color:	white;
-	top: 40%;
+	top: 45%;
 	position: absolute;
 	text-align: center;
 	opacity: 0;
@@ -37,7 +37,7 @@ body {
 }
 #hr {
 	width: 15px;
-	height: 100%;
+	height: 99.7%;
 	left: 7%;
 	background-color:	white;
 	position: absolute;
@@ -91,4 +91,45 @@ ul {
 
 .entry:hover  .label {
 	opacity: 1;
+}
+
+@media (max-height: 800px) {
+  .container {
+    top: 50%;
+  }
+}
+@media (max-height: 700px) {
+  .container {
+    top: 60%;
+  }
+}
+@media (max-height: 600px) {
+  .container {
+    top: 70%;
+  }
+}
+@media (max-height: 500px) {
+  .container {
+    top: 80%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 390px;
+    margin:-180px 0 0 -180px;
+    top: 15%;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 252px;
+    margin:-125px 0 0 -125px;
+    top: 10%;
+  }
+  .entry>a>img {
+    width: 245px;
+    height: 145px;
+  }
 }

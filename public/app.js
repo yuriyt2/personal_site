@@ -6,6 +6,8 @@ window.onload = function(){
     var projectsLink = document.getElementsByClassName('projects')[0];
     var projectsList = document.getElementsByClassName('projects-list')[0];
     var content = document.getElementsByClassName('content')[0];
+    contactList.style.display = "none";
+    projectsList.style.display = "none";
     contactLink.addEventListener('click',function(e){
       e.preventDefault();
       content.classList.remove('move')
