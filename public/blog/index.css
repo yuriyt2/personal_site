@@ -56,6 +56,7 @@ h3 {
   text-align: left;
   margin-top: 70px;
 }
+
 ul {
   padding: 0;
   margin-right: -50px;
@@ -120,6 +121,7 @@ ul {
     margin:-180px 0 0 -180px;
     top: 15%;
   }
+
 }
 
 @media (max-width: 500px) {
@@ -128,6 +130,7 @@ ul {
     margin:-125px 0 0 -125px;
     top: 10%;
   }
+
   .entry>a>img {
     width: 255px;
     height: 145px;
