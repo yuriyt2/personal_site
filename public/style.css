@@ -94,6 +94,7 @@ h1 {
 	width: 180%;
 	text-align: justify;
 	margin-left: -27%;
+	line-height: 135%;
 }
 .bio>a {
 	color: white;
@@ -208,8 +209,8 @@ img	{
 
 @media (max-width: 750px) {
 	.projects-list>li>a>img {
-		width: 110px;
-		height: 65px;
+		width: 180px;
+		height: 125px;
 		margin-right: 5px;
 		margin-bottom: 5px;
 	}
@@ -219,10 +220,10 @@ img	{
 		margin-left: -85px;
 	}
 	.project-title {
-		bottom: 40px;
-		margin-left: -190px;
+		bottom: 65px;
+		margin-left: -220px;
 		width: 250px;
-		font-size: .7em;
+		font-size: .9em;
 		font-weight: normal;
 	}
 	.bio {
@@ -241,17 +242,17 @@ img	{
 		font-size: .7em;
 	}
 	.content {
-	left: 60%;
+	left: 50%;
 	}
 	.projects-list>li>a>img {
-		width: 60px;
-		height: 35px;
-		margin-right: 2px;
-		margin-bottom: 2px;
+		width: 120px;
+		height: 65px;
+		margin-right: 3px;
+		margin-bottom: 3px;
 	}
 	.projects-list {
-		width: 250px;
-		margin-left: 35px;
+		width: 280px;
+		margin-left: 25px;
 	}
 	.project-title {
 		display: none;
