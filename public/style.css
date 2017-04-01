@@ -19,7 +19,7 @@ h1 {
 	letter-spacing: 1px;
 }
 
-hr {
+.hr {
 	width: 15px;
 	height: 99.8%;
 	left: 7%;
@@ -55,14 +55,14 @@ hr {
 
 .nav-links {
 	width: 400px;
-	margin-top: 60px;
+	margin-top: 40px;
 	margin-left: -30px;
 }
 
 .nav-links>li {
 	display: inline;
 	margin-top: 3px;
-	margin-right: 19px;
+	margin-right: 22px;
 	font-size: 1.6em;
 	color: rgba(255, 255, 255, 0.7);
 	letter-spacing: 2px;
@@ -72,11 +72,12 @@ hr {
 		color: rgba(255, 255, 255, 0.7);
 }
 
+
 .contact-links {
 	width: 400px;
 	right: 43px;
 	position: absolute;
-	margin-top: 53px;
+	margin-top: 93px;
 	opacity: 0;
 }
 
@@ -84,23 +85,49 @@ hr {
 	display: inline;
 	margin-top: 3px;
 	margin: 10px;
+	margin-left: 40px;
+}
+
+.bio {
+	margin-bottom: 80px;
+	margin-top: -60px;
+	width: 180%;
+	text-align: justify;
+	margin-left: -27%;
+}
+.bio>a {
+	color: white;
+}
+
+.contact-label {
+	margin-left: 20px;
+}
+.photo {
+	width: 150px;
+	filter: grayscale(100%);
+	float: right;
+	margin-top: 7px;
+	margin-bottom: 8px;
+	margin-left: 15px;
+	border-radius: 20px;
 }
 
 img	{
-	width: 85px;
+	width: 60px;
 }
 
 #mailbox {
-	width: 115px;
-	height: 142px;
-	bottom: -22px;
+	width: 75px;
+	height: 92px;
+	bottom: -14px;
 	position: absolute;
 	margin-left: -12px;
 }
 
 #linked {
 	border: 5px solid white;
-	height:	78px;
+	height:	48px;
+	width: 48px;
 }
 .projects-list {
 	width: 990px;
@@ -173,6 +200,10 @@ img	{
 		width: 250px;
 		font-size: .9em;
 	}
+	.bio {
+		width: 150%;
+		margin-left: -40px;
+	}
 }
 
 @media (max-width: 750px) {
@@ -193,6 +224,14 @@ img	{
 		width: 250px;
 		font-size: .7em;
 		font-weight: normal;
+	}
+	.bio {
+		width: 92%;
+		margin-left: 70px;
+		font-size: .85em;
+	}
+	.photo {
+		width: 120px;
 	}
 }
 
@@ -216,5 +255,16 @@ img	{
 	}
 	.project-title {
 		display: none;
+	}
+	.bio {
+		width: 60%;
+		margin-left: 120px;
+		font-size: 1.2em;
+	}
+	.photo {
+		width: 90px;
+	}
+	.contact-links>li {
+		margin-left: 15px;
 	}
 }

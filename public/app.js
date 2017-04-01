@@ -10,17 +10,20 @@ window.onload = function(){
     projectsList.style.display = "none";
     contactLink.addEventListener('click',function(e){
       e.preventDefault();
-      content.classList.remove('move')
+      contactLink.children[0].style.color = 'white';
+      projectsLink.children[0].style.color = 'rgba(255, 255, 255, 0.7)';
+      content.classList.add('move')
       projectsList.style.display = 'none';
       contactList.style.display = 'block';
       contactList.style.animation = 'backcolor 3000ms forwards';
     });
     projectsLink.addEventListener('click',function(e){
       e.preventDefault();
-      content.classList.add('move')
+      projectsLink.children[0].style.color = 'white';
+      contactLink.children[0].style.color = 'rgba(255, 255, 255, 0.7)';
+      content.classList.add('move');
       contactList.style.display = 'none';
       projectsList.style.display = 'block';
       projectsList.style.animation = 'backcolor 3000ms forwards';
-      content.style.transfomationDelay = '2s'
     })
 }
