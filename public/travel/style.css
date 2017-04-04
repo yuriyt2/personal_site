@@ -55,9 +55,10 @@ body {
 
 h2 {
 	margin-bottom: 2px;
-	color: lightgray;
+	color: #8F9596;
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 1.2em;
+
 }
 
 h1 {
@@ -106,7 +107,31 @@ h1 {
 
 }
 
-@media (max-width: 750px) {
+@media (max-width: 1600px) {
+	.content {
+		width: 1200px;
+	}
+	.image {
+		width: 63%;
+	}
+
+}
+
+@media (max-width: 1200px) {
+	.content {
+		width: 900px;
+	}
+	.image {
+		width: 62%;
+	}
+	.map {
+		height: 344px;
+	}
+
+}
+
+
+@media (max-width: 900px) {
 	.content {
 		width: 100%;
 
@@ -142,7 +167,7 @@ h1 {
 	}
 	h2,.map,.why,.where {
 		margin-left: 20px;
-		width: 87%;
+		width: 95%;
 	}
 	.map {
 		margin-bottom: 20px; 
