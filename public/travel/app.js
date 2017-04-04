@@ -15,9 +15,14 @@ var newLocation = ""
         });
       }
 
+$(".refresh").click(function(){
+	location.reload();
+})
+
 window.onload = function () {
 
-		$.ajax({
+var getLocation = function(){		
+	$.ajax({
 		  url: "https://travel-api-app.herokuapp.com/random",
 		  success: function(data){newLocation = data},
 		  crossDomain:true,
@@ -28,8 +33,8 @@ window.onload = function () {
 		$($(".photo")[0]).attr("src",newLocation.img_url);
 		initMap();
 	});
-	
-
+}
+getLocation()
 
 
     
