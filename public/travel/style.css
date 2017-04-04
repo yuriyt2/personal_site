@@ -1,6 +1,7 @@
 body {
 
 	background-color: lightgray;
+	font-family: 'Lusitana', serif;
 }
 
 .content {
@@ -48,17 +49,22 @@ body {
 	vertical-align: top;
 	border: 3px solid white;
 	background-color: #404647;
-	padding: 10px 20px 40px 20px;
+	padding: 10px 20px 20px 20px;
 	color: lightgray;
 }
 
 h2 {
 	margin-bottom: 2px;
 	color: lightgray;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 1.2em;
 }
 
 h1 {
 	color: lightgray;
+	font-family: 'Biryani', sans-serif;
+	font-size: 1.4em;
+
 }
 
 .image>img,.where,.map,.why {
@@ -85,7 +91,7 @@ h1 {
 }
 
 .map {
-	height: 290px;
+	height: 384px;
 	margin-top: 10px;	
 
 	border: 3px solid white;
