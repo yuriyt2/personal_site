@@ -8,7 +8,19 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 
+}
 
+.title {
+	color: black;
+	text-align: center;
+	/*background-color: #404647;*/
+	/*border: 3px solid white;*/
+	padding: 10px 0px 10px 0px;
+	margin:0px 0px 15px 0px;
+	width: 99.1%;
+	font-family: 'Julius Sans One', sans-serif;
+	letter-spacing: .07em;
+	font-size: 2.8em;
 }
 
 .image {
@@ -74,21 +86,40 @@ h1 {
 
 @media (max-width: 750px) {
 	.content {
-		width: 90%;
+		width: 100%;
+		height: inherit;
+		margin-left: -1%;
+	}
+	.title {
+		font-size: 1.3em;
 	}
 	.image {
 		display: block;
-		width: 90%;
+		width: 100%;
+		position: static;
+		border: none;
+		margin-bottom: 1%;
 	}
 	.image > img {
 		width: 100%;
+		max-width: 110%;
+		max-height: 110%;
+		position: static;
+		transform: translate(0);
+		left: 0;
+		display: block;
+		vertical-align: bottom;
 	}
 	.description {
-		width: 90%; 
+		width: 100%; 
 		padding: 0;
+		border: none;
 	}
 	h2,.map,.why,.where {
 		margin-left: 20px;
-		width: 90%;
+		width: 87%;
+	}
+	.map {
+		margin-bottom: 20px; 
 	}
 }
