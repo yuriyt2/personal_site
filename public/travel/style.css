@@ -86,6 +86,7 @@ h1 {
 	vertical-align: top;
 	text-overflow: ellipsis;
 	height: 140px;
+	font-size: 1.15em;
 
 }
 .why-text {
@@ -129,8 +130,11 @@ h1 {
 	.description {
 		width: 28%;
 	}
+	.why {
+		height: 190px;
+	}
 	.map {
-		height: 402px;
+		height: 352px;
 	}
 
 }
@@ -171,6 +175,9 @@ h1 {
 		margin-left: 20px;
 		width: 95%;
 	}
+	h1{
+		font-size: 2em;
+	}
 	.why {
 		height: 100px;
 	}
@@ -193,6 +200,14 @@ h1 {
 	}
 		.map {
 		height: 200px;
+		margin-top: 5px;
+	}
+		.why {
+		height: 190px;
+		font-size: 1.25em;
+	}
+		h1{
+		font-size: 1.15em;
 	}
 }
 
@@ -203,6 +218,10 @@ h1 {
 	.box {
 		width: 91%;
 	}
+	h1{
+		font-size: 1.05em;
+	}
+
 }
 @media (max-width: 300px) {
 	.box {
