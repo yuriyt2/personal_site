@@ -76,6 +76,7 @@ h1 {
 .why {
 	vertical-align: top;
 	text-overflow: ellipsis;
+	height: 125px;
 }
 
 .map {
@@ -84,11 +85,19 @@ h1 {
 	border: 3px solid white;
 }
 
+.refresh {
+	width: 150px;
+	height: 40px;
+	margin-left: 50%;
+	margin-top: 10px;
+	transform: translate(-75px);
+}
+
 @media (max-width: 750px) {
 	.content {
 		width: 100%;
 		height: inherit;
-		margin-left: -1%;
+		margin-left: 0%;
 	}
 	.title {
 		font-size: 1.3em;
