@@ -48,7 +48,7 @@ body {
 	vertical-align: top;
 	border: 3px solid white;
 	background-color: #404647;
-	padding: 10px 20px 20px 20px;
+	padding: 10px 1.8% 20px 1.8%;
 	color: lightgray;
 }
 
@@ -100,13 +100,25 @@ h1 {
 	border: 3px solid white;
 }
 
-.refresh {
+button {
 	width: 150px;
 	height: 40px;
-	margin-left: 50%;
-	margin-top: 10px;
-	transform: translate(-75px);
+	display: inline;
+}
 
+.buttons {
+	width: 400px;
+	margin-left: 50%;
+	margin-top: 1%;
+	transform: translate(-200px);
+}
+
+.counter {
+	padding-bottom: 2px;
+	/*margin-left: 128px;*/
+	font-size: 1.2em;
+	margin-right: 3%;
+	margin-left: 3%;
 }
 
 @media (max-width: 1300px) {

@@ -8,7 +8,7 @@ var newLocation = ""
       var initMap = function() {
         var uluru = {lat: newLocation.latitude, lng: newLocation.longitude};
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 6,
+          zoom: 7,
           center: uluru
         });
         var marker = new google.maps.Marker({
@@ -23,6 +23,12 @@ $(".refresh").click(function(){
 	newLocation = allLocations[locationCount]
 	replaceContent()
 })
+$(".previous").click(function(){
+	$($(".photo")[0]).attr("src","");
+	locationCount == 0 ? locationCount = allLocations.length -1 : locationCount -=1
+	newLocation = allLocations[locationCount]
+	replaceContent()
+})
 
 var replaceContent = function () {
 	$($(".photo")[0]).attr("src",newLocation.img_url);
@@ -31,7 +37,7 @@ var replaceContent = function () {
 		$(".why-text").text(newLocation.description);
 		initMap();
 	},100);
-
+	$(".counter").text(locationCount+1 + " of " + allLocations.length)
 }
 var getLocations = function(){		
 	$.ajax({
