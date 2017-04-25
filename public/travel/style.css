@@ -63,7 +63,7 @@ h2 {
 h1 {
 	color: lightgray;
 	font-family: 'Biryani', sans-serif;
-	font-size: 1.2em;
+	font-size: 1.05em;
 
 }
 
@@ -85,7 +85,7 @@ h1 {
 .why {
 	vertical-align: top;
 	text-overflow: ellipsis;
-	height: 140px;
+	height: 186px;
 	font-size: 1.15em;
 
 }
@@ -95,7 +95,7 @@ h1 {
 }
 
 .map {
-	height: 385px;
+	height: 345px;
 	margin-top: 10px;	
 	border: 3px solid white;
 }
@@ -123,13 +123,16 @@ button {
 
 @media (max-width: 1300px) {
 	h1 {
-		font-size: 1em;
+		font-size: .9em;
 	}
 	.description {
 		width: 29%;
 	}
+	.why {
+		height: 216px;
+	}
 	.map {
-		height: 393px;
+		height: 322px;
 	}
 }
 @media (max-width: 1150px) {
@@ -137,16 +140,16 @@ button {
 		font-size: 2.5em;
 	}
 	h1 {
-		font-size: .78em;
+		font-size: .74em;
 	}
 	.description {
 		width: 28%;
 	}
 	.why {
-		height: 190px;
+		height: 260px;
 	}
 	.map {
-		height: 352px;
+		height: 282px;
 	}
 
 }
@@ -188,7 +191,7 @@ button {
 		width: 95%;
 	}
 	h1{
-		font-size: 2em;
+		font-size: 1.8em;
 	}
 	.why {
 		height: 100px;
@@ -216,10 +219,10 @@ button {
 	}
 		.why {
 		height: 190px;
-		font-size: 1.25em;
+		font-size: 1.15em;
 	}
 		h1{
-		font-size: 1.15em;
+		font-size: 1.05em;
 	}
 }
 
@@ -231,7 +234,7 @@ button {
 		width: 91%;
 	}
 	h1{
-		font-size: 1.05em;
+		font-size: .95em;
 	}
 
 }
