@@ -1,5 +1,5 @@
 
-console.log("it's on")
+console.log("welcome to the travel inspiration app")
 
 var allLocations = []
 var locationCount = 0
