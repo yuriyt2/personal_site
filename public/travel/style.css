@@ -121,6 +121,17 @@ button {
 	margin-left: 3%;
 }
 
+.loading {
+	content: "Loading...";
+	position: fixed;
+	top: 50%;
+	left: 30%;
+	z-index: 999;
+	color: lightgray;
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 1.5em;
+}
+
 @media (max-width: 1300px) {
 	h1 {
 		font-size: .9em;
@@ -212,6 +223,10 @@ button {
 	}
 	.counter {
 		font-size: 1em;
+	}
+	.loading {
+		top: 30%;
+		left: 40%;
 	}
 }
 @media (max-width: 700px) {

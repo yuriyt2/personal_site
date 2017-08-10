@@ -39,13 +39,15 @@ var replaceContent = function () {
 	},100);
 	$(".counter").text(locationCount+1 + " of " + allLocations.length)
 }
-var getLocations = function(){		
+var getLocations = function(){
+	$('body').append('<div class="loading">Loading...</div>')
 	$.ajax({
 		  url: "https://travel-api-app.herokuapp.com/random",
 		  success: function(data){allLocations = data},
 		  crossDomain:true,
 		  dataType: "json"
 	}).done(function(){
+		$(".loading").remove()
 		newLocation = allLocations[0];
 		replaceContent();
 	});
