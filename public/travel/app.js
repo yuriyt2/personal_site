@@ -31,13 +31,12 @@ $(".previous").click(function(){
 var photoTurnstile = function(){
 	$(".photo").css("cursor","pointer")
 	$(".photo").click(function(){
-		$(this).animate({opacity:0},{duration:1000});
 			if ($(this).next().length>0) {
-				$(this).next().css("display","block").animate({opacity:1},{duration:1000});
-				setTimeout(function(){$(this).css("display","none")},0)
+				$(this).animate({opacity:0},{duration:1500}).after(function(){$(this).css("display","none")});
+				$(this).next().css("display","block").animate({opacity:1},{duration:1500});
 			}else{
-				$($(".photo")[0]).css("dislay","block").animate({opacity:1},{duration:1000});
-				$(this).css("display","none");
+				$(this).animate({opacity:0},{duration:1500}).after(function(){$(this).css("display","none")});
+				$($(".photo")[0]).show().animate({opacity:1},{duration:1500});
 			}
 	})
 }
