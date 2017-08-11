@@ -32,10 +32,10 @@ var photoTurnstile = function(){
 	$(".photo").css({"cursor":"pointer"});
 	$(".photo").click(function(){
 		if ($(this).next().length>0) {
+				window.innerWidth>999?$(this).fadeOut(500):$(this).hide();
 				$(this).next().fadeIn(800);
-				$(this).fadeOut(500);
 			}else{
-				$(this).fadeOut(500);
+				window.innerWidth>999?$(this).fadeOut(500):$(this).hide();
 				$($(".photo")[0]).fadeIn(800);
 			}
 	})

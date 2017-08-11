@@ -187,7 +187,7 @@ button {
 		width: 100%;
 		max-width: 110%;
 		max-height: 110%;
-		position: static;
+		position: relative;
 		transform: translate(0);
 		left: 0;
 		display: block;
