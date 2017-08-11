@@ -1,48 +1,48 @@
 console.log("welcome to the travel inspiration app");
 $('body').append('<div class="loading">Loading...</div>');
 
-var allLocations = []
-var locationCount = 0
-var newLocation = ""
-var images = []
+var allLocations = [];
+var locationCount = 0;
+var newLocation = "";
+var images = [];
 
-      var initMap = function() {
-        var uluru = {lat: newLocation.latitude, lng: newLocation.longitude};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 7,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
+var initMap = function() {
+  var uluru = {lat: newLocation.latitude, lng: newLocation.longitude};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 7,
+    center: uluru
+  });
+  var marker = new google.maps.Marker({
+    position: uluru,
+    map: map
+  });
+}
 
 $(".next").click(function(){
-	locationCount +1 >= allLocations.length ? locationCount = 0 : locationCount +=1
+	locationCount +1 >= allLocations.length ? locationCount = 0 : locationCount +=1;
 	newLocation = allLocations[locationCount];
 	replaceContent();
 })
 $(".previous").click(function(){
-	locationCount == 0 ? locationCount = allLocations.length -1 : locationCount -=1
+	locationCount == 0 ? locationCount = allLocations.length -1 : locationCount -=1;
 	newLocation = allLocations[locationCount];
 	replaceContent();
 })
 var photoTurnstile = function(){
-	$(".photo").css("cursor","pointer")
+	$(".photo").css({"cursor":"pointer"});
 	$(".photo").click(function(){
-			if ($(this).next().length>0) {
-				$(this).animate({opacity:0},{duration:1500}).after(function(){$(this).hide()});
-				$(this).next().show().animate({opacity:1},{duration:1500});
+		if ($(this).next().length>0) {
+				$(this).next().fadeIn(800);
+				$(this).fadeOut(500);
 			}else{
-				$(this).animate({opacity:0},{duration:1500}).after(function(){$(this).hide()});
-				$($(".photo")[0]).show().animate({opacity:1},{duration:1500});
+				$(this).fadeOut(500);
+				$($(".photo")[0]).fadeIn(800);
 			}
 	})
 }
 
 var setUpPage = function () {
-	$(".loading").remove()
+	$(".loading").remove();
 	newLocation = allLocations[0];
 	replaceContent();
 }
@@ -51,7 +51,7 @@ var replaceContent = function () {
 	images = newLocation.img_url.split(",");
 	images.forEach(function(img){
 		var newImage = $('<img class="photo">');
-		newImage.attr("src",img).hide().css("opacity",0);
+		newImage.attr("src",img).hide();
 		$(".image").append(newImage);
 	})
 	if (images.length>1) {
@@ -63,7 +63,7 @@ var replaceContent = function () {
 		$(".why-text").text(newLocation.description);
 		initMap();
 	},100);
-	$(".counter").text(locationCount+1 + " of " + allLocations.length)
+	$(".counter").text(locationCount+1 + " of " + allLocations.length);
 }
 
 var getLocations = function(){
