@@ -212,12 +212,11 @@ button {
 		height: 0;
 	}
 	.buttons {
-		position: absolute;
-		top: 60px;
 		transform: translate(-170px);
+		margin-top: 2%;
 	}
 	button {
-		height: 25px;
+		height: 35px;
 		width: 120px;
 	}
 	.counter {
@@ -239,14 +238,13 @@ button {
 		.title {
 		font-size: 1.1em;
 		margin-bottom: 30px;
-
 	}
 
 		h1{
 		font-size: 1.05em;
 	}
 		.buttons {
-		top: 40px;
+		transform: translate(-160px);
 	}
 }
 
@@ -260,7 +258,9 @@ button {
 	h1{
 		font-size: .95em;
 	}
-
+	.buttons {
+	transform:
+	}
 
 }
 @media (max-width: 300px) {
