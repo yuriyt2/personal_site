@@ -46,7 +46,7 @@ var photoTurnstile = function(){
 				$($(".photo")[0]).fadeIn(800);
 			}
       if (window.innerWidth<999){
-        resizeMap();
+        setTimeout(function(){resizeMap()},0)
       }
 	})
 }
