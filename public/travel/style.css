@@ -212,12 +212,12 @@ button {
 		height: 0;
 	}
 	.buttons {
-		transform: translate(-200px);
+		transform: translate(-210px);
 		margin-top: 2%;
 	}
 	button {
 		height: 35px;
-		width: 160px;
+		width: 150px;
 	}
 	.counter {
 		font-size: 1em;
@@ -240,10 +240,10 @@ button {
 		margin-bottom: 30px;
 	}
 
-		h1{
+	h1{
 		font-size: 1.05em;
 	}
-		.buttons {
+	.buttons {
 		transform: translate(-44%);
 	}
 	button {
