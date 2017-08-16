@@ -74,7 +74,7 @@ h1 {
 }
 
 .where {
-	
+
 }
 
 .why {
@@ -86,12 +86,12 @@ h1 {
 }
 .why-text {
 	margin: 0px;
-	margin-top: 8px;	
+	margin-top: 8px;
 }
 
 .map {
 	height: 275px;
-	margin-top: 10px;	
+	margin-top: 10px;
 	border: 3px solid white;
 }
 
@@ -190,7 +190,7 @@ button {
 		vertical-align: bottom;
 	}
 	.description {
-		width: 100%; 
+		width: 100%;
 		padding: 0;
 		border: none;
 	}
@@ -207,9 +207,9 @@ button {
 		height: inherit;
 	}
 	.map {
-		margin-bottom: 20px; 
+		margin-bottom: 20px;
 		margin-top: 25px;
-		height: 250px;
+		height: 0;
 	}
 	.buttons {
 		position: absolute;
@@ -217,7 +217,7 @@ button {
 		transform: translate(-170px);
 	}
 	button {
-		height: 25px;	
+		height: 25px;
 		width: 120px;
 	}
 	.counter {
@@ -240,9 +240,6 @@ button {
 		font-size: 1.1em;
 		margin-bottom: 30px;
 
-	}
-		.map {
-		height: 200px;
 	}
 
 		h1{
@@ -270,8 +267,4 @@ button {
 	.box {
 		width: 84%;
 	}
-	.map {
-		height: 150px;
-	}
 }
-
