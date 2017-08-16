@@ -52,7 +52,7 @@ var photoTurnstile = function(){
 }
 var resizeMap = function(){
   if (window.innerWidth<999) {
-      (window.innerHeight - 25 + $('.map').height())-($(".content").height())>150?setTimeout(function(){$('.map').height((window.innerHeight - 25 + $('.map').height())-($(".content").height()));initMap()},0):$('.map').height(150);initMap();
+      (window.innerHeight - 25 + $('.map').height())-($(".content").height())>150?setTimeout(function(){$('.map').height((window.innerHeight - 25 + $('.map').height())-($(".content").height()));initMap()},100):$('.map').height(150);initMap();
   }else{
       initMap();
   }
