@@ -70,10 +70,10 @@ var replaceContent = function () {
 		newImage.attr("src",img).hide();
 		$(".image").append(newImage);
 	})
+  	$($(".photo")[0]).show();
 	if (images.length>1) {
 		photoTurnstile()
 	}
-	$($(".photo")[0]).show();
 	setTimeout(function(){
 		$(".location").text(newLocation.name);
 		$(".why-text").text(newLocation.description);
