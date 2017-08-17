@@ -65,12 +65,12 @@ var setUpPage = function () {
 }
 var replaceContent = function () {
 	images = newLocation.img_url.split(",");
-	images.forEach(function(img){
+	images.forEach(function(img,ind){
 		var newImage = $('<img class="photo">');
-		newImage.attr("src",img).hide();
-		$(".image").append(newImage);
+		newImage.attr("src",img);
+    $(".image").append(newImage);
+    if(ind>0) $(newImage).hide();
 	})
-  	$($(".photo")[0]).show();
 	if (images.length>1) {
 		photoTurnstile()
 	}
