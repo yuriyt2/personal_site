@@ -2,6 +2,7 @@ body {
 
 	background-color: lightgray;
 	font-family: 'Lusitana', serif;
+	-webkit-text-size-adjust: 100%;
 }
 
 .content {
@@ -204,7 +205,7 @@ button {
 		height: inherit;
 	}
 	.why-text {
-		font-size: 14px;
+		font-size: 1em;
 	}
 	.map {
 		margin-bottom: 20px;
