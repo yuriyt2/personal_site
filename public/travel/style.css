@@ -82,7 +82,6 @@ h1 {
 	text-overflow: ellipsis;
 	height: 256px;
 	font-size: 1.12em;
-
 }
 .why-text {
 	margin: 0px;
@@ -169,7 +168,6 @@ button {
 	}
 	.title {
 		font-size: 2em;
-
 	}
 	.image {
 		display: block;
@@ -201,8 +199,10 @@ button {
 		font-size: 1.8em;
 	}
 	.why {
-		font-size: 15px;
 		height: inherit;
+	}
+	.why-text {
+		font-size: 18px;
 	}
 	.map {
 		margin-bottom: 20px;
