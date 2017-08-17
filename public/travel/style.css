@@ -202,7 +202,7 @@ button {
 		height: inherit;
 	}
 	.why-text {
-		font-size: 18px;
+		font-size: 15px;
 	}
 	.map {
 		margin-bottom: 20px;
@@ -223,6 +223,7 @@ button {
 	.loading {
 		top: 30%;
 		left: 40%;
+		color: white;
 	}
 }
 @media (max-width: 700px) {
