@@ -169,7 +169,6 @@ button {
 	}
 	.title {
 		font-size: 2em;
-		margin-bottom: 50px;
 
 	}
 	.image {
@@ -203,7 +202,6 @@ button {
 	}
 	.why {
 		font-size: 15px;
-		display: flex;
 		height: inherit;
 	}
 	.map {
@@ -237,7 +235,6 @@ button {
 	}
 		.title {
 		font-size: 1.1em;
-		margin-bottom: 30px;
 	}
 
 	h1{

@@ -46,7 +46,7 @@ var photoTurnstile = function(){
 				$($(".photo")[0]).fadeIn(800);
 			}
       if (window.innerWidth<999){
-        setTimeout(function(){resizeMap()},0)
+        resizeMap(); 
       }
 	})
 }
@@ -69,16 +69,21 @@ var replaceContent = function () {
 		var newImage = $('<img class="photo">');
 		newImage.attr("src",img);
     $(".image").append(newImage);
-    if(ind>0) $(newImage).hide();
+    if(ind>0) {
+      $(newImage).hide();
+    }else{
+      $(newImage).on('load',function(){
+        setTimeout(function(){
+      		$(".location").text(newLocation.name);
+      		$(".why-text").text(newLocation.description);
+          resizeMap();
+      	},0);
+      })
+    }
 	})
 	if (images.length>1) {
 		photoTurnstile()
 	}
-	setTimeout(function(){
-		$(".location").text(newLocation.name);
-		$(".why-text").text(newLocation.description);
-    resizeMap();
-	},100);
 	$(".counter").text(locationCount+1 + " of " + allLocations.length);
 }
 
