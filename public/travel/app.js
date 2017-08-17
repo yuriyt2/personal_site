@@ -34,6 +34,7 @@ $(window).resize(function(){
   $('.map').remove();
   $('.description').append('<div class="map box" id="map">');
   resizeMap();
+  setTimeout(function(){initMap()},100)
 })
 var photoTurnstile = function(){
 	$(".photo").css({"cursor":"pointer"});
@@ -46,15 +47,15 @@ var photoTurnstile = function(){
 				$($(".photo")[0]).fadeIn(800);
 			}
       if (window.innerWidth<999){
-        resizeMap(); 
+        setTimeout(function(){resizeMap()},0)
       }
 	})
 }
 var resizeMap = function(){
   if (window.innerWidth<999) {
-      (window.innerHeight - 25 + $('.map').height())-($(".content").height())>150?setTimeout(function(){$('.map').height((window.innerHeight - 25 + $('.map').height())-($(".content").height()));initMap()},100):$('.map').height(250);initMap();
+      (window.innerHeight - 25 + $('.map').height())-($(".content").height())>150?setTimeout(function(){$('.map').height((window.innerHeight - 25 + $('.map').height())-($(".content").height()));google.maps.event.trigger(map, "resize")},0):$('.map').height(250);google.maps.event.trigger(map, "resize");
   }else{
-      initMap();
+      google.maps.event.trigger(map, "resize");
   }
 }
 
@@ -73,11 +74,10 @@ var replaceContent = function () {
       $(newImage).hide();
     }else{
       $(newImage).on('load',function(){
-        setTimeout(function(){
       		$(".location").text(newLocation.name);
       		$(".why-text").text(newLocation.description);
           resizeMap();
-      	},0);
+          setTimeout(function(){initMap()},100)
       })
     }
 	})
