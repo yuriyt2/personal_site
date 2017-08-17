@@ -81,11 +81,11 @@ h1 {
 	vertical-align: top;
 	text-overflow: ellipsis;
 	height: 256px;
-	font-size: 1.12em;
 }
 .why-text {
 	margin: 0px;
 	margin-top: 8px;
+	font-size: 1.12em;
 }
 
 .map {
@@ -152,6 +152,8 @@ button {
 	}
 	.why {
 		height: 301px;
+	}
+	.why-text {
 		font-size: 1.05em;
 	}
 	.map {
@@ -223,7 +225,6 @@ button {
 	.loading {
 		top: 10%;
 		left: 40%;
-		color: white;
 	}
 }
 @media (max-width: 700px) {
