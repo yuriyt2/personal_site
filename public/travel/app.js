@@ -7,7 +7,6 @@ var newLocation = "";
 var images = [];
 
 var initMap = function() {
-  console.log("init")
   var uluru = {lat: newLocation.latitude, lng: newLocation.longitude};
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
@@ -56,7 +55,6 @@ var photoTurnstile = function(){
 	})
 }
 var resizeMap = function(){
-  console.log("resize")
   if (window.innerWidth<999) {
       (window.innerHeight - 25 + $('.map').height())-($(".content").height())>150?setTimeout(function(){$('.map').height((window.innerHeight - 25 + $('.map').height())-($(".content").height()));google.maps.event.trigger(map, "resize")},0):$('.map').height(250);google.maps.event.trigger(map, "resize");
   }else{
