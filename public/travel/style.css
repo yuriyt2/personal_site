@@ -205,7 +205,7 @@ button {
 		height: inherit;
 	}
 	.why-text {
-		font-size: 1.5em;
+		font-size: 1.4em;
 	}
 	.map {
 		margin-bottom: 20px;
@@ -232,12 +232,15 @@ button {
 	.box {
 		width: 91%;
 	}
-		h2,.map,.why,.where {
+	h2,.map,.why,.where {
 		margin-left: 10px;
 		width: 95%;
 	}
-		.title {
+	.title {
 		font-size: 1.1em;
+	}
+	.why-text {
+		font-size: 1.3em;
 	}
 
 	h1{
