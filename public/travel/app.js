@@ -10,7 +10,7 @@ var initMap = function() {
   console.log("init")
   var uluru = {lat: newLocation.latitude, lng: newLocation.longitude};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 7,
+    zoom: 8,
     center: uluru
   });
   var marker = new google.maps.Marker({
