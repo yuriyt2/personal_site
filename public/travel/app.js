@@ -43,10 +43,10 @@ var photoTurnstile = function(){
 	$(".photo").css({"cursor":"pointer"});
 	$(".photo").click(function(){
 		if ($(this).next().length>0) {
-				window.innerWidth>999?$(this).fadeOut(500):$(this).hide();
+				window.innerWidth>999?$(this).fadeOut(700):$(this).hide();
 				$(this).next().fadeIn(800);
 			}else{
-				window.innerWidth>999?$(this).fadeOut(500):$(this).hide();
+				window.innerWidth>999?$(this).fadeOut(700):$(this).hide();
 				$($(".photo")[0]).fadeIn(800);
 			}
       if (window.innerWidth<999){
