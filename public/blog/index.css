@@ -22,10 +22,8 @@ body {
 	position: absolute;
 	text-align: center;
 	opacity: 0;
-	animation: backcolor 2000ms;
-	animation-delay: 500ms;
+	animation: backcolor 1000ms;
 	animation-fill-mode: forwards;
-	transition: 800ms ease-in-out;
 }
 @keyframes backcolor {
 	0% {
@@ -43,10 +41,6 @@ body {
 	position: absolute;
 	margin-top: 0px;
 	margin-bottom: 0px;
-	opacity: 0;
-	animation: backcolor 1500ms;
-	animation-delay: 100ms;
-	animation-fill-mode: forwards;
 }
 h3 {
   margin-bottom: -5px;
