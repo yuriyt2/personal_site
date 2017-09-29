@@ -277,3 +277,40 @@ button {
 		width: 84%;
 	}
 }
+	@media (max-height: 850px) and (min-width: 1000px) {
+	.image {
+		height: 600px;
+	}
+	.description {
+		height: 570px;
+	}
+	.why {
+		height: 290px;
+	}
+	.map {
+		height: 142px;
+	}
+	.title {
+		font-size: 2.2em;
+	}
+}
+	@media (max-height: 740px) and (min-width: 1000px) {
+	.image {
+		height: 450px;
+	}
+	.description {
+		height: 420px;
+	}
+	.why {
+		height: 190px;
+	}
+	.map {
+		height: 102px;
+	}
+	.why-text {
+		font-size: .8em;
+	}
+	.title {
+		font-size: 2em;
+	}
+}
