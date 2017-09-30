@@ -118,8 +118,8 @@ button {
 }
 .back {
 	position: absolute;
-	top: 15px;
-	right: 30px;
+	top: 20px;
+	right: 50px;
 	width: 60px;
 	height: 25px;
 }
@@ -225,10 +225,14 @@ button {
 		top: 10%;
 		left: 40%;
 	}
+	.back {
+		top: 10px;
+		right: 20px;
+	}
 }
 @media (max-width: 700px) {
 	#location-title {
-		font-size: 1.3em;
+		font-size: .85em;
 	}
 	.box {
 		width: 91%;
@@ -251,12 +255,15 @@ button {
 		width: 140px;
 	}
 	.back {
-		top: 15px;
+		top: 10px;
 		right: 10px;
 	}
 }
 
 @media (max-width: 400px) {
+	#location-title {
+		font-size: .7em;
+	}
 	.box {
 		width: 91%;
 	}
@@ -268,6 +275,10 @@ button {
 	}
 	button {
 		width: 115px;
+	}
+	.back {
+		top: 5px;
+		right: 5px;
 	}
 
 }
