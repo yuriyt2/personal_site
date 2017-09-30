@@ -18,6 +18,13 @@ var initMap = function() {
   });
 }
 
+var contentToggle = function () {
+  $(".content").toggle()
+}
+var indexToggle = function () {
+  $(".all-locations").toggle()
+}
+
 $(".next").click(function(){
   $(".photo").remove();
 	locationCount >= allLocations.length -1 ? locationCount = 0 : locationCount +=1;
@@ -30,6 +37,11 @@ $(".previous").click(function(){
 	newLocation = allLocations[locationCount];
 	replaceContent();
 })
+$(".back").click(function(){
+  $(".photo").remove();
+  contentToggle();
+  indexToggle();
+})
 $(window).on("resize",function(){
   if (window.innerWidth>999){
     $('.map').remove();
@@ -39,6 +51,18 @@ $(window).on("resize",function(){
     resizeMap();
   }
 })
+
+var showSetup = function () {
+  $(".location").click(function(){
+   var count = parseInt($(this).attr('class').split(" ")[1])
+   newLocation = allLocations[count]
+   locationCount = count
+   contentToggle();
+   indexToggle();
+   replaceContent();
+  })
+}
+
 var photoTurnstile = function(){
 	$(".photo").css({"cursor":"pointer"});
 	$(".photo").click(function(){
@@ -64,20 +88,20 @@ var resizeMap = function(){
 
 var setUpPage = function () {
 	$(".loading").remove();
-	newLocation = allLocations[0];
-	replaceContent();
+  setIndex();
 }
+
 var replaceContent = function () {
 	images = newLocation.img_url.split(",");
 	images.forEach(function(img,ind){
-		var newImage = $('<img class="photo">');
+		var newImage = $('<img class="photo" title="click to view more photos">');
 		newImage.attr("src",img);
-    $(".image").append(newImage);
+    $("#image").append(newImage);
     if(ind>0) {
       $(newImage).hide();
     }else{
       $(newImage).on('load',function(){
-      		$(".location").text(newLocation.name);
+      		$("#location-title").text(newLocation.name);
       		$(".why-text").text(newLocation.description);
           resizeMap();
           setTimeout(function(){initMap()},100)
@@ -97,8 +121,20 @@ var getLocations = function(){
 		  crossDomain:true,
 		  dataType: "json"
 	}).done(function(){
-		setUpPage();
+		setUpPage()
 	});
 }
 
+
+var setIndex = function () {
+  allLocations.forEach(function(loc,ind){
+    var location = $('<li class="location '+ ind + '">')
+    var img = $('<div class="image" style=background-image:url('+loc.img_url.split(",")[0]+')>')
+    $(location).append(img)
+    $('.locations-list').append(location)
+  })
+    showSetup();
+}
+
+contentToggle();
 getLocations();
