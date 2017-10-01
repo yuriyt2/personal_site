@@ -56,7 +56,7 @@
 		font-family: "Biryani" , sans-serif;
 		color: white;
 		display: inline-block;
-		transform: translateY(-350%);
+		transform: translateY(-375%);
 		font-size: .9em;
 	}
 	.location:hover .image{
