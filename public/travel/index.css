@@ -36,7 +36,7 @@
 	.location {
 		display: inline-block;
 		width: 	24.5%;
-		height: 22%;
+		height: 21.5%;
 		min-height: 100px;
 		margin-right: .5%;
 		margin-top: -14px;
@@ -66,10 +66,10 @@
 		opacity: 1;
 	}
 
-	@media (max-width: 1400px) {
+	@media (max-width: 1500px) {
 		.location {
 			width: 	32.3%;
-			height: 23%;
+			height: 20%;
 		}
 
 	}
@@ -79,20 +79,20 @@
 		}
 		.location {
 			width: 	49%;
-			height: 25%;
+			height: 24.5%;
 			margin-right: 1%;
 		}
 		.inspiration {
 			display: none;
 		}
 	}
-	@media (max-width: 750px) {
+	@media (max-width: 800px) {
 		.title {
 			font-size: 1.1em;
 		}
 			.location {
 				width: 	96%;
-				height: 36%;
+				height: 35%;
 				margin-top: -16px;
 			}
 			.all-locations {
@@ -102,10 +102,15 @@
 		.img-title {
 			transform: translateY(-500%);
 		}
+
 	}
-		@media (max-width: 500px) {
+		@media (max-width: 600px) {
 		.location {
-			height: 27%;
+			height: 22%;
+			margin-top: -15px;
+		}
+				.image {
+			border-radius: 5%;
 		}
 
 	}
