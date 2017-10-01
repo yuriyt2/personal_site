@@ -131,7 +131,10 @@ var setIndex = function () {
   allLocations.forEach(function(loc,ind){
     var location = $('<li class="location '+ ind + '">')
     var img = $('<div class="image" style=background-image:url('+loc.img_url.split(",")[0]+')>')
+    var title = $('<div class="img-title">')
+    title.html(loc.name)
     $(location).append(img)
+    $(location).append(title)
     $('.locations-list').append(location)
   })
     showSetup();

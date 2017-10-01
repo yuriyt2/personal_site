@@ -39,8 +39,9 @@
 		height: 22%;
 		min-height: 100px;
 		margin-right: .5%;
-		margin-top: .25%;
+		margin-top: -14px;
 		cursor: pointer;
+		text-align: center;
 	}
 	.image	{
 		width: 100%;
@@ -49,6 +50,20 @@
 		background-repeat: no-repeat;
 		background-size: 110%;
 		border-radius: 3%;
+	}
+	.img-title {
+		opacity: 0;
+		font-family: "Biryani" , sans-serif;
+		color: white;
+		display: inline-block;
+		transform: translateY(-350%);
+		font-size: .9em;
+	}
+	.location:hover .image{
+		opacity: .2;
+	}
+	.location:hover .img-title	{
+		opacity: 1;
 	}
 
 	@media (max-width: 1400px) {
@@ -66,7 +81,6 @@
 			width: 	49%;
 			height: 25%;
 			margin-right: 1%;
-			margin-top: .1%;
 		}
 		.inspiration {
 			display: none;
@@ -79,11 +93,14 @@
 			.location {
 				width: 	96%;
 				height: 36%;
-				margin-right: 1%;
+				margin-top: -16px;
 			}
 			.all-locations {
 				padding-right: 5px;
 				padding-left: 5px;
+		}
+		.img-title {
+			transform: translateY(-500%);
 		}
 	}
 		@media (max-width: 500px) {
@@ -91,4 +108,9 @@
 			height: 27%;
 		}
 
+	}
+		@media (max-height: 700px) {
+		.img-title {
+			transform: translateY(-250%);
+		}
 	}
