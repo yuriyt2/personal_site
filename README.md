@@ -1,4 +1,4 @@
-# Personal Siye
+# Personal Site
 ## By [Yuriy Turetskiy](https://www.yuriyturetskiy.com)
 
 ![screenshot](./screenshot.png)
