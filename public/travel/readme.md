@@ -1,5 +1,5 @@
 # Travel Inspiration App
-## By [Yuriy Turetskiy](https://www.yuriyturetskiy.com)
+## By [Yuriy Turetskiy](http://www.yuriyturetskiy.com)
 
 ![screenshot](https://s3-us-west-2.amazonaws.com/yuriy-site/travel-app.png)
 ![screenshot2](https://s3-us-west-2.amazonaws.com/yuriy-site/travel-app2.png)
@@ -18,7 +18,7 @@
 + Google Maps API
 
 ### Deployment URL
-[Travel Inspiration Application](https://www.yuriyturetskiy.com/travel)
+[Travel Inspiration Application](http://yuriyt.com/travel)
 
 ### Technical Details
 + I built a [separate](https://github.com/yuriyt2/travel-api) CRUD (create, read, update, destroy) application in Rails to function as an API for the front end and deployed it on Heroku.  It's configured to allow cross-origin GET HTTP requests.
