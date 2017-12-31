@@ -62,7 +62,7 @@ tr {
 }
 
 .c3 {
-	background-color: #b1711e;
+	background-color: rgba(215,114,0,0.85);
 }
 
 @media (max-width:700px){
