@@ -50,7 +50,16 @@ h2 {
 h3,h5 {
 		font-family: 'Lato', sans-serif;
 }
-
+h3 {
+			margin-left: 25px;
+			font-size: 1.5em;
+		}
+		h5	{
+			margin-left: 30px;
+			font-size: 1.2em;
+			margin-top: -5px;
+			margin-bottom: -5px;
+		}
 h4  {
 	position: relative;
 	text-align: right;
@@ -76,19 +85,20 @@ a {
 	color: rgb(35, 33, 31);
 	font-family: 'Lora', serif;
 }
+.left,.right {
+	cursor: zoom-in;
+	border: 2px double rgba(135, 133, 131, 0.7);
+	border-radius: 5px;
+}
 
 .left {
 	margin: 15px 25px 10px 0px;
 	float: left;
-	border: 2px double rgba(135, 133, 131, 0.7);
-	border-radius: 5px;
 }
 
 .right {
 	margin: 15px 0px 10px 25px;
 	float: right;
-	border: 2px double rgba(135, 133, 131, 0.7);
-	border-radius: 5px;
 }
 
 @media (max-width: 1100px) {

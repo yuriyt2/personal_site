@@ -44,7 +44,7 @@ h1 {
 	text-align: center;
 	opacity: 0;
 	animation: backcolor 3500ms;
-	animation-delay: 200ms;
+	animation-delay: 300ms;
 	animation-fill-mode: forwards;
 	transition: 800ms ease-in-out;
 }
