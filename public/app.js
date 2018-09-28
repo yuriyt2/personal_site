@@ -4,26 +4,36 @@ window.onload = function(){
     var contactLink = document.getElementsByClassName('contact')[0];
     var contactList = document.getElementsByClassName('contact-links')[0];
     var projectsLink = document.getElementsByClassName('projects')[0];
+    var projectsLink1 = document.getElementsByClassName('projects')[1];
+    var projectsLink2 = document.getElementsByClassName('projects')[2];
     var projectsList = document.getElementsByClassName('projects-list')[0];
     var content = document.getElementsByClassName('content')[0];
+    var navLinks = document.getElementsByClassName('nav-links')[0];
     contactList.style.display = "none";
     projectsList.style.display = "none";
-    contactLink.addEventListener('click',function(e){
-      e.preventDefault();
-      contactLink.children[0].style.color = 'white';
-      projectsLink.children[0].style.color = 'rgba(255, 255, 255, 0.7)';
-      content.classList.add('move')
-      projectsList.style.display = 'none';
-      contactList.style.display = 'block';
-      contactList.style.animation = 'backcolor 3000ms forwards';
-    });
-    projectsLink.addEventListener('click',function(e){
-      e.preventDefault();
-      projectsLink.children[0].style.color = 'white';
-      contactLink.children[0].style.color = 'rgba(255, 255, 255, 0.7)';
+    function moveNav(activeLink,nonActiveLink,activeList,nonActiveList) {
+      activeLink.children[0].style.color = 'white';
+      nonActiveLink.children[0].style.color = 'rgba(255, 255, 255, 0.7)';
       content.classList.add('move');
-      contactList.style.display = 'none';
-      projectsList.style.display = 'block';
-      projectsList.style.animation = 'backcolor 3000ms forwards';
-    })
+      nonActiveList.style.display = 'none';
+      activeList.style.display = 'block';
+      activeList.style.animation = 'backcolor 2000ms forwards';
+    }
+    contactLink.addEventListener('click',function(){
+      moveNav(contactLink,projectsLink,contactList,projectsList)
+    });
+    projectsLink.addEventListener('click',function(){
+      moveNav(projectsLink,contactLink,projectsList,contactList)
+    });
+    projectsLink1.addEventListener('click',function(){
+      moveNav(projectsLink,contactLink,projectsList,contactList)
+    });
+    projectsLink2.addEventListener('click',function(){
+      moveNav(projectsLink,contactLink,projectsList,contactList)
+    });
+    navLinks.style.animation = "backcolor 2000ms"
+    navLinks.style['animation-fill-mode'] = "forwards"
+    navLinks.style['animation-delay'] = "500ms"
+
+    document.getElementById("email").children[0].href = "mailto:"+window.location.hostname.split(".")[1]+"@"+"gmail.com"
 }

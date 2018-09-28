@@ -28,8 +28,8 @@ h1 {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	opacity: 0;
-	animation: backcolor 2500ms;
-	animation-delay: 100ms;
+	animation: backcolor 3300ms;
+	animation-delay: 200ms;
 	animation-fill-mode: forwards;
 }
 
@@ -43,8 +43,8 @@ h1 {
 	position: absolute;
 	text-align: center;
 	opacity: 0;
-	animation: backcolor 3500ms;
-	animation-delay: 300ms;
+	animation: backcolor 2500ms;
+	animation-delay: 1000ms;
 	animation-fill-mode: forwards;
 	transition: 800ms ease-in-out;
 }
@@ -54,6 +54,7 @@ h1 {
 }
 
 .nav-links {
+	opacity: 0;
 	width: 400px;
 	margin-top: 40px;
 	margin-left: -30px;
@@ -67,11 +68,14 @@ h1 {
 	color: rgba(255, 255, 255, 0.7);
 	letter-spacing: 2px;
 }
-.link>a {
+.link>span {
 		text-decoration: none;
 		color: rgba(255, 255, 255, 0.7);
+		cursor: pointer;
 }
-
+.projects {
+	cursor: pointer;
+}
 
 .contact-links {
 	width: 400px;

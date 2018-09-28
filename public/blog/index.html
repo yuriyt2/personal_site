@@ -6,35 +6,82 @@
     <link rel="stylesheet" href="index.css" media="screen" title="no title" charset="utf-8">
   </head>
   <body>
-    <hr id="hr">
-    <div class="container">
-      <div class="content">
-        <h2 style="text-align:center">Blog</h2>
-        <div class="travel">
-          <h3>Travel</h3>
-          <ul class="travel-list">
-            <li class="entry"><a href="http://yuriyturetskiy.com/blog/ruta-de-los-conventos" target="_top"><img src="https://s3-us-west-2.amazonaws.com/yuriy-site/ruta.png" alt="" /><span class="label">Ruta de los Conventos</span></a></li>
-            <li class="entry"><a href="http://yuriyturetskiy.com/blog/up-in-the-hills" target="_top"><img src="https://s3-us-west-2.amazonaws.com/yuriy-site/up-in-the-hills.png" alt="" /><span class="label">Up in the Hills </span></a></li>
-          </ul>
-          <hr>
-        </div>
-        <div class="cycling">
-          <h3>Cycling</h3>
+        <h1>Blog</h1>
+        <ul class="nav">
+          <li id="all" class="link">All</li><span> |</span>
+          <li id="travel" class="link">Travel</li><span> |</span>
+          <li id="cycling" class="link">Cycling</li>
+        </ul>
           <ul>
-            <li class="entry"><a href="http://yuriyturetskiy.com/blog/new-bike" target="_top"><img src="https://s3-us-west-2.amazonaws.com/yuriy-site/new-bike.png" alt="" /><span class="label">So You Bought<br> a New Bike?</span></a></li>
-        </div>
-        <hr>
-        <div class="brewing">
-          <!-- <h3>Brewing</h3> -->
-          <ul>
-            <!-- <li class="entry"><a href="./ruta-de-los-conventos"><img src="https://s3-us-west-2.amazonaws.com/yuriy-site/personal.png" alt="" /><span class="label">Ruta de los Conventos</span></a></li> -->
-          </ul>
-        </div>
-        <!-- <hr> -->
-      </div>
-      <a class="home-button" target="_top" href="http://yuriyturetskiy.com">⌂</a>
-    </div>
+            <li class="entry travel cycling">
+              <a href="./touring-the-rhodope-mountains">
+                <img src="https://s3-us-west-2.amazonaws.com/yuriy-site/touring-rhodopes/top-rhodopes.jpg">
+              </a>
+               <div class="details"><b>Title:</b> Touring the Rhodope Mountains &nbsp;<b> Category:</b> Cycling, Travel</div><div class="details right">  <b> Published:</b>  September 22, 2018</div>
+            </li>
+            <li class="entry cycling">
+              <a href="./top-5-nyc-bike-trails">
+                <img src="https://s3-us-west-2.amazonaws.com/yuriy-site/top-trips/top-trips.jpg" alt="" />
+              </a>
+              <div class="details"><b>Title:</b> Top 5 NYC Bike Trails &nbsp;<b> Category:</b> Cycling</div><div class="details right">  <b> Published:</b>  July 3, 2018</div>
+            </li>
+            <li class="entry travel cycling">
+              <a href="./merida-to-tulum">
+                <img src="https://s3-us-west-2.amazonaws.com/yuriy-site/250-miles/250-miles.jpg" alt="" />
+              </a>
+              <div class="details"><b>Title:</b> Merida to Tulum &nbsp;<b> Category:</b> Cycling, Travel</div><div class="details right">  <b> Published:</b>  January 17, 2018</div>
+            </li>
+            <li class="entry cycling">
+              <a href="./new-bike" >
+                <img src="https://s3-us-west-2.amazonaws.com/yuriy-site/new-bike/new-bike.JPG" alt="" />
+              </a>
+              <div class="details"><b>Title:</b> So You Bought a New Bike? &nbsp;<b> Category:</b> Cycling</div><div class="details right">  <b> Published:</b>  January 30, 2017</div>
+            </li>
+            <li class="entry travel">
+              <a href="./up-in-the-hills">
+                <img src="https://s3-us-west-2.amazonaws.com/yuriy-site/up-in-the-hills/header.jpg" alt="" />
+              </a>
+              <div class="details"><b>Title:</b> Up in the Hills &nbsp;<b> Category:</b> Travel</div><div class="details right">  <b> Published:</b>  January 14, 2017</div>
+            </li>
+            <li class="entry travel">
+              <a href="./ruta-de-los-conventos">
+                <img src="https://s3-us-west-2.amazonaws.com/yuriy-site/ruta/1.jpg" alt="" />
+              </a>
+              <div class="details"><b>Title:</b> Ruta de los Conventos &nbsp;<b> Category:</b> Travel</div><div class="details right">  <b> Published:</b>  February 27, 2016</div>
+            </li>
 
 
+          </ul>
+            <br style="clear:both"><br>
+      <a class="home-button" target="_top" href="/"> <span>⌂</span><div class="home-label">home</div></a>
+
+      <script src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+      <script type="text/javascript">
+
+        window.onload = function(){
+          $('#all').css('font-weight','bold')
+          var resetNav = function(){
+            $('.entry').hide();
+            $('.link').css('font-weight','normal')
+          }
+          $('#travel').click(function(){
+            resetNav()
+           $('#travel').css('font-weight','bold')
+           $('.travel').show(0);
+          })
+          $('#cycling').click(function(){
+            resetNav()
+           $('#cycling').css('font-weight','bold')
+           $('.cycling').show(0);
+          })
+          $('#all').click(function(){
+            resetNav()
+           $('#all').css('font-weight','bold')
+           $('.entry').show(0);
+          })
+        }
+
+
+      </script>
   </body>
 </html>

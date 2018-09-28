@@ -38,6 +38,7 @@ $(".previous").click(function(){
 	replaceContent();
 })
 $(".back").click(function(){
+  history.replaceState({},'index',location.pathname)
   $(".photo").remove();
   contentToggle();
   indexToggle();
@@ -57,6 +58,7 @@ var showSetup = function () {
    var count = parseInt($(this).attr('class').split(" ")[1])
    newLocation = allLocations[count]
    locationCount = count
+   history.pushState({},'show',location.pathname + '?' + newLocation.name.split(",")[0])
    contentToggle();
    indexToggle();
    replaceContent();
@@ -139,6 +141,39 @@ var setIndex = function () {
   })
     showSetup();
 }
+
+
+function removeInfo(){
+  $('.info-box').remove();
+}
+
+function addInfo(){
+  let infoBox = $('<div class="info-box">');
+  infoBox.css({'position':'fixed','top':'5%','left':'5%','z-index':'1000','opacity':'0.95','color':'white','text-align':'center','width':'80%','background-color':'#555a5b','border-radius':'20px','padding':'5%','font-size':'1.3em','font-family':'Verdana, sans-serif','letter-spacing':'1.5px','line-height':'30px'});
+  infoBox.html("Brainstorm ideas for travel destinations.  The locations on this page are all places I've been to loaded in random order.  Choose a location to explore, then click through the photos next to the description and enjoy.");
+  let closeButton = $('<a class="close-button">');
+  closeButton.html("close");
+  closeButton.css({'display':'block','margin-top':'20px','text-decoration':'underline','cursor':'pointer','color':'lightgray','font-size':'.7em'});
+  $(infoBox).append(closeButton);
+  $('body').append(infoBox);
+  $(infoBox).click(function(){
+    removeInfo();
+  })
+}
+
+$('.question-mark').click(function(){
+  addInfo();
+})
+
+window.addEventListener('popstate', function(){
+  if (location.search == "") {
+    history.replaceState({},'index',location.pathname);
+    $(".photo").remove();
+    indexToggle();
+    contentToggle();
+  }
+});
+
 
 contentToggle();
 getLocations();

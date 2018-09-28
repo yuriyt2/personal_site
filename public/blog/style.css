@@ -51,15 +51,15 @@ h3,h5 {
 		font-family: 'Lato', sans-serif;
 }
 h3 {
-			margin-left: 25px;
-			font-size: 1.5em;
-		}
-		h5	{
-			margin-left: 30px;
-			font-size: 1.2em;
-			margin-top: -5px;
-			margin-bottom: -5px;
-		}
+		margin-left: 25px;
+		font-size: 1.5em;
+}
+h5	{
+		margin-left: 30px;
+		font-size: 1.2em;
+		margin-top: -5px;
+		margin-bottom: -5px;
+}
 h4  {
 	position: relative;
 	text-align: right;
@@ -100,9 +100,66 @@ a {
 	margin: 15px 0px 10px 25px;
 	float: right;
 }
+.paragraph {
+	padding-left: 25px;
+	padding-right: 25px;
+	line-height: 1.35em;
+	text-align: justify;
+	font-family: 'Lora', serif;
+	font-size: 1.2em;
+}
+.left-box>img,.right-box>img {
+	cursor: zoom-in;
+	border: 2px double rgba(135, 133, 131, 0.7);
+	border-radius: 5px;
+}
+.right-box {
+	margin: 5px 5px 0px 30px;
+	float: right;
+}
+.right-box>img,.left-box>img{
+	width: inherit;
+}
+.left-box {
+	margin: 10px 25px 0px 0px;
+	float: left;
+}
+.subtext {
+	margin-right: 30px;
+	margin-left: 25px;
+	margin-top: -15px;
+	margin-bottom: 15px;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.2em;
+}
+.caption {
+	opacity: .7;
+	text-align: center;
+	font-size: .8em;
+	font-style: italic;
+}
+.tab {
+	margin-left: 40px;
+}
+.margin-kill {
+	margin-top: -15px;
+}
+.map-link {
+	letter-spacing: 2px;
+	font-size: .8em;
+	vertical-align: text-top;
+	margin-left: 6px;
+}
+
 
 @media (max-width: 1100px) {
-	p {
+	p,.paragraph {
+		font-size: 1em;
+	}
+	header>h1 {
+		font-size: 4vw;
+	}
+	.caption {
 		font-size: 1em;
 	}
 }
