@@ -7,13 +7,13 @@ var newLocation = "";
 var images = [];
 
 var initMap = function() {
-  var uluru = {lat: newLocation.latitude, lng: newLocation.longitude};
-  var map = new google.maps.Map(document.getElementById('map'), {
+  let loc = {lat: newLocation.latitude, lng: newLocation.longitude};
+  let map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
-    center: uluru
+    center: loc
   });
-  var marker = new google.maps.Marker({
-    position: uluru,
+  let marker = new google.maps.Marker({
+    position: loc,
     map: map
   });
 }
@@ -161,9 +161,127 @@ function addInfo(){
   })
 }
 
+function sortByRecent(){
+  allLocations = allLocations.sort(function(a,b){
+    if (a.created_at < b.created_at) {
+    return 1;
+    }
+    if (a.created_at > b.created_at) {
+      return -1;
+    }
+  })
+}
+
+function sortByAlpha(){
+  allLocations = allLocations.sort(function(a,b){
+    if (a.name < b.name) {
+    return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+  })
+}
+
 $('.question-mark').click(function(){
   addInfo();
 })
+
+$('#sort-options').change(function(){
+  switch($('#sort-options').val()){
+    case 'random-sort':
+      getLocations();
+      $('.location').remove();
+    break
+    case 'recent-sort':
+      sortByRecent();
+      $('.location').remove();
+      setIndex();
+    break
+    case 'alpha-sort':
+      sortByAlpha();
+      $('.location').remove();
+      setIndex();
+    break
+  }
+})
+
+$('#view-options').change(function(){
+  switch($('#view-options').val()){
+    case 'tiles-view':
+      $('#all-map').hide();
+      $('#list-view').remove();
+      $('.locations-list').show();
+    break
+    case 'map-view':
+      $('.locations-list').hide();
+      $('#list-view').remove();
+      if ($('#all-map').length > 0){
+        $('#all-map').show();
+      }else{
+        allLocationsMap();
+      }
+    break
+    case 'list-view':
+      $('.locations-list').hide();
+      $('#all-map').hide();
+      createListView();
+    break
+  }
+})
+
+function allLocationsMap() {
+  let allMap = $('<div id="all-map">');
+  $(allMap).css({width:"99.5%",height:"inherit"});
+  $('.all-locations').append(allMap);
+
+  let map = new google.maps.Map(document.getElementById('all-map'), {
+    zoom: 2.5,
+    center: {lat:20,lng:-30}
+  });
+
+  allLocations.forEach(function(loc){
+    let marker = new google.maps.Marker({
+      position: {lat: loc.latitude, lng: loc.longitude},
+      map: map,
+      title: loc.name,
+      animation: google.maps.Animation.DROP
+    });
+    marker.addListener('click', function() {
+      newLocation = loc;
+      history.pushState({},'show',location.pathname + '?' + newLocation.name.split(",")[0])
+      replaceContent();
+      indexToggle();
+      contentToggle();  
+    });
+  })
+}
+
+function createListView(){
+  let listView = $('<div id="list-view">');
+  let locationList = $('<ul class="list-view-locations">');
+  $(listView).append(locationList);
+  allLocations.sort(function(a,b){
+    if (a.name < b.name) {
+    return -1;
+    }
+    if (a.name > b.name) {
+      return 1;
+    }
+  }).forEach(function(loc){
+    let locationLi = $('<li class="listed-location">');
+    locationLi.html(loc.name)
+    $(locationList).append(locationLi)
+    $(locationLi).click(function(){
+      newLocation = loc;
+      history.pushState({},'show',location.pathname + '?' + newLocation.name.split(",")[0])
+      replaceContent();
+      indexToggle();
+      contentToggle();  
+    })
+  })
+  $('.all-locations').append(listView);
+}
 
 window.addEventListener('popstate', function(){
   if (location.search == "") {

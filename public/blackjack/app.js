@@ -324,7 +324,7 @@ var resetBoard = function (){
 
 //++++++++++++++++++++++++OR IS IT????+++++++++++++++++++++++++++++++++++++++
 
-left = 120000;
+left = 15000;
 $("#pony").css("top", "-650px");
 var walkingPony = function() {
   var pony = $('#pony');
@@ -336,8 +336,8 @@ var walkingPony = function() {
   }else {
     $(pony).css("display","none");
   }
-  if (left < -1000) {
-    left = 120000
+  if (left < -100) {
+    left = 30000
   }
 };
-setInterval(walkingPony,10)
+setInterval(walkingPony,18)
