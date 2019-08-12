@@ -84,7 +84,7 @@ var photoTurnstile = function(){
 var resizeMap = function(){
   var totalHeight = $(".description").height() + $("#image").height() + $(".where").height() + $(".buttons").height()
   if (window.innerWidth<999) {
-      (window.innerHeight + $('.map').height()) - totalHeight > 150 ? setTimeout(function(){console.log("hi");$('.map').height((window.innerHeight - 60 + $('.map').height())-totalHeight);google.maps.event.trigger(map, "resize")},0):$('.map').height(250);google.maps.event.trigger(map, "resize");
+      (window.innerHeight + $('.map').height()) - totalHeight > 150 ? setTimeout(function(){$('.map').height((window.innerHeight - 60 + $('.map').height())-totalHeight);google.maps.event.trigger(map, "resize")},0):$('.map').height(250);google.maps.event.trigger(map, "resize");
   }else{
       google.maps.event.trigger(map, "resize");
   }
@@ -191,6 +191,7 @@ function sortByAlpha(){
 }
 
 function sortByCountry(){
+  sortByAlpha()
   allLocations = allLocations.sort(function(a,b){
     if (a.country < b.country) {
     return -1;
