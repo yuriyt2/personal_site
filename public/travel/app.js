@@ -5,6 +5,7 @@ var allLocations = [];
 var locationCount = 0;
 var newLocation = "";
 var images = [];
+var countriesView = false;
 
 var initMap = function() {
   let loc = {lat: newLocation.latitude, lng: newLocation.longitude};
@@ -131,6 +132,13 @@ var getLocations = function(){
 
 var setIndex = function () {
   allLocations.forEach(function(loc,ind){
+    if(!countriesView){
+      $('.country-tag').remove()
+    }
+    if((countriesView && ind === 0) || (countriesView && loc.country !== allLocations[ind-1].country)){
+      var countryTag = $('<h1 class="country-tag">').html(loc.country)
+      $('.locations-list').append(countryTag)
+    }
     var location = $('<li class="location '+ ind + '">')
     var img = $('<div class="image" style=background-image:url('+loc.img_url.split(",")[0]+')>')
     var title = $('<div class="img-title">')
@@ -142,7 +150,6 @@ var setIndex = function () {
     showSetup();
 }
 
-
 function removeInfo(){
   $('.info-box').remove();
 }
@@ -150,7 +157,7 @@ function removeInfo(){
 function addInfo(){
   let infoBox = $('<div class="info-box">');
   infoBox.css({'position':'fixed','top':'5%','left':'5%','z-index':'1000','opacity':'0.95','color':'white','text-align':'center','width':'80%','background-color':'#555a5b','border-radius':'20px','padding':'5%','font-size':'1.3em','font-family':'Verdana, sans-serif','letter-spacing':'1.5px','line-height':'30px'});
-  infoBox.html("Brainstorm ideas for travel destinations.  The locations on this page are all places I've been to loaded in random order.  Choose a location to explore, then click through the photos next to the description and enjoy.");
+  infoBox.html("Brainstorm ideas for travel destinations.  Choose a location to explore, then click through the photos next to the description.  All locations are places I've been and all photos were taken by me.");
   let closeButton = $('<a class="close-button">');
   closeButton.html("close");
   closeButton.css({'display':'block','margin-top':'20px','text-decoration':'underline','cursor':'pointer','color':'lightgray','font-size':'.7em'});
@@ -183,11 +190,23 @@ function sortByAlpha(){
   })
 }
 
+function sortByCountry(){
+  allLocations = allLocations.sort(function(a,b){
+    if (a.country < b.country) {
+    return -1;
+    }
+    if (a.country > b.country) {
+      return 1;
+    }
+  })
+}
+
 $('.question-mark').click(function(){
   addInfo();
 })
 
 $('#sort-options').change(function(){
+  countriesView = false;
   switch($('#sort-options').val()){
     case 'random-sort':
       getLocations();
@@ -201,6 +220,12 @@ $('#sort-options').change(function(){
     case 'alpha-sort':
       sortByAlpha();
       $('.location').remove();
+      setIndex();
+    break
+    case 'country-sort':
+      sortByCountry();
+      $('.location').remove();
+      countriesView = true;
       setIndex();
     break
   }

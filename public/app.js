@@ -28,9 +28,6 @@ window.onload = function(){
     projectsLink1.addEventListener('click',function(){
       moveNav(projectsLink,contactLink,projectsList,contactList)
     });
-    projectsLink2.addEventListener('click',function(){
-      moveNav(projectsLink,contactLink,projectsList,contactList)
-    });
     navLinks.style.animation = "backcolor 2000ms"
     navLinks.style['animation-fill-mode'] = "forwards"
     navLinks.style['animation-delay'] = "500ms"
