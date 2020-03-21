@@ -44,15 +44,6 @@ $(".back").click(function(){
   contentToggle();
   indexToggle();
 })
-$(window).on("resize",function(){
-  if (window.innerWidth>999){
-    $('.map').remove();
-    $('.description').append('<div class="map box" id="map">');
-    setTimeout(function(){initMap()},0)
-  }else{
-    resizeMap();
-  }
-})
 
 var showSetup = function () {
   $(".location").click(function(){
@@ -76,18 +67,7 @@ var photoTurnstile = function(){
 				window.innerWidth>999?$(this).fadeOut(700):$(this).hide();
 				$($(".photo")[0]).fadeIn(800);
 			}
-      if (window.innerWidth<999){
-        setTimeout(function(){resizeMap()},0)
-      }
 	})
-}
-var resizeMap = function(){
-  var totalHeight = $(".description").height() + $("#image").height() + $(".where").height() + $(".buttons").height()
-  if (window.innerWidth<999) {
-      (window.innerHeight + $('.map').height()) - totalHeight > 150 ? setTimeout(function(){$('.map').height((window.innerHeight - 60 + $('.map').height())-totalHeight);google.maps.event.trigger(map, "resize")},0):$('.map').height(250);google.maps.event.trigger(map, "resize");
-  }else{
-      google.maps.event.trigger(map, "resize");
-  }
 }
 
 var setUpPage = function () {
@@ -108,7 +88,6 @@ var replaceContent = function () {
       $(newImage).on('load',function(){
       		$("#location-title").text(newLocation.name);
       		$(".why-text").text(newLocation.description);
-          resizeMap();
           setTimeout(function(){initMap()},100)
       })
     }
