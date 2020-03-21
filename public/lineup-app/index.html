@@ -4,7 +4,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"   integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E="   crossorigin="anonymous"></script>
     <meta charset="utf-8">
-    <title></title>
+    <meta property="og:title" content="Custom linup creation app">
+    <meta name="description" content="Create your own custom lineup.">
+    <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/yuriy-site/lineup.png">
+    <meta name="keywords" content="Soccer, football, lineup, creation app, custom image">
+    <title>Custom lineup creation app</title>
     <style media="screen">
       .outer-div {
         color: #2c3e50;
@@ -25,7 +29,6 @@
         padding-top: 20px;
       }
       .setup {
-        /*margin-left: 15px;*/
         margin-left: auto;
         margin-right: auto;
         margin-top: 0px;
@@ -63,7 +66,7 @@
         padding-top: 1px;
         padding-right: 5px;
       }
-      .player>img {
+      .player {
         width:90px;
         height:90px;
         border-radius: 60px;
@@ -71,9 +74,13 @@
         margin-right: 120px;
         border: 2px solid;
         border-color:  #7f8c9d;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-image: url("./images/placeholder.png");
       }
       li {
-        display: inline;
+        display: inline-block;
       }
       .starters {
         margin-top: 70px;
@@ -86,7 +93,7 @@
         margin-left: 20px;
       }
 
-      .sub>ul>li>img {
+      .sub>ul>li {
         margin-right: 20px;
       }
       #sub-sign {
@@ -113,12 +120,6 @@
         text-align: center;
         margin-right: 4px;
       }
-      /*#edit-info,#help {
-        margin-left: 5px;
-      }
-      #about,#contact {
-        margin-right: 5px;
-      }*/
 
       @media (max-width:1200px) {
         .outer-div{
@@ -126,7 +127,7 @@
           width: 1150px;
           height: 766px;
         }
-        .player>img {
+        .player {
           width:80px;
           height:80px;
             margin-right: 90px;
@@ -167,7 +168,7 @@
           width: 850px;
           height: 566px;
         }
-        .player>img {
+        .player {
           width:50px;
           height: 50px;
           margin-right: 70px;
@@ -211,7 +212,7 @@
       <button type="button" id="edit-info">Edit Format</button>
       <button type="button" id="help">Help</button>
       <button type="button" id="about"><a href="https://github.com/yuriyt2/personal_site/tree/master/public/lineup-app" style="text-decoration:none;color:inherit;" target="_blank">What Is This?</a></button>
-      <a href="mailto:yuriy.turetskiy@gmail.com"><button type="button" id="contact">Contact</button></a>
+      <a href="/"><button type="button" id="contact">Home</button></a>
     </div>
     <div class="outer-div">
     <!-- All images used in this project are sourced from https://pixabay.com/. -->
@@ -245,35 +246,35 @@
 
     <ul class="starters">
     <!--Striker-->
-      <li class="player all striker"><img src="images/placeholder.png" alt="" /></li>
-      <li class="player all striker"><img src="images/placeholder.png" alt="" /></li><br>
+      <li class="player all striker"></li>
+      <li class="player all striker"></li><br>
     <!--Midfield-->
-      <li class="player all midfield"><img src="images/placeholder.png" alt="" /></li>
-      <li class="player all midfield"><img src="images/placeholder.png" alt="" /></li>
-      <li class="player all midfield"><img src="images/placeholder.png" alt="" /></li>
-      <li class="player all midfield"><img src="images/placeholder.png" alt="" /></li><br>
+      <li class="player all midfield"></li>
+      <li class="player all midfield"></li>
+      <li class="player all midfield"></li>
+      <li class="player all midfield"></li><br>
     <!--Defense-->
-      <li class="player all defense"><img src="images/placeholder.png" alt=""  /></li>
-      <li class="player all defense"><img src="images/placeholder.png" alt=""  /></li>
-      <li class="player all defense"><img src="images/placeholder.png" alt=""  /></li>
-      <li class="player all defense"><img src="images/placeholder.png" alt=""  /></li><br>
+      <li class="player all defense"></li>
+      <li class="player all defense"></li>
+      <li class="player all defense"></li>
+      <li class="player all defense"></li><br>
     <!--GK-->
-      <li class="player all keeper"><img src="images/placeholder.png" alt="" /></li>
+      <li class="player all keeper"></li>
     </ul>
     <!--Subs-->
 
     <div class="sub">
           <h2 id="sub-sign">Subs:</h2>
       <ul>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
-        <li class="player all bench"><img src="images/placeholder.png" alt="" /></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
+        <li class="player all bench"></li>
       </ul>
     </div>
     <div class="help" style="display:none;">
@@ -288,7 +289,7 @@
       </p>
       <h4>Step 3</h4>
       <p>
-        Click on each player to change their image or click "auto" to fill with stock images.  Custome images should be cropped to a square (lengthshould be equal to width).
+        Click on each player to change their image or click "auto" to fill with stock images.  Custom images should be cropped.
       </p>
       <h4>Step 4</h4>
       <p>
@@ -305,11 +306,8 @@
     </div>
   </div>
 
-
     <script type="text/javascript">
-      $(".all>img").draggable()
-    </script>
-    <script type="text/javascript">
+      $(".all").draggable();
 
     // Team name edit
         $("#team-name").click(function(){
@@ -322,58 +320,58 @@
             $(".name-change-form").toggle();
             $("#team-name").toggle();
           }else{
-            alert("Enter a team name.")
+            alert("Enter a team name.");
           }
         });
     // Formation edit
     $(".formation").change(function(){
       switch($(".formation").val()) {
         case "5":
-            $($(".striker")[1]).hide()
-            $($(".midfield")[1]).hide()
-            $($(".midfield")[2]).hide()
-            $($(".midfield")[3]).hide()
-            $($(".defense")[2]).hide()
-            $($(".defense")[3]).hide()
+            $($(".striker")[1]).hide();
+            $($(".midfield")[1]).hide();
+            $($(".midfield")[2]).hide();
+            $($(".midfield")[3]).hide();
+            $($(".defense")[2]).hide();
+            $($(".defense")[3]).hide();
             break;
         case "6":
-            $(".striker,.defense,.midfield").show()
-            $($(".striker")[1]).hide()
-            $($(".midfield")[2]).hide()
-            $($(".midfield")[3]).hide()
-            $($(".defense")[2]).hide()
-            $($(".defense")[3]).hide()
+            $(".striker,.defense,.midfield").show();
+            $($(".striker")[1]).hide();
+            $($(".midfield")[2]).hide();
+            $($(".midfield")[3]).hide();
+            $($(".defense")[2]).hide();
+            $($(".defense")[3]).hide();
             break;
         case "7":
-            $(".striker,.defense,.midfield").show()
-            $($(".striker")[1]).hide()
-            $($(".midfield")[3]).hide()
-            $($(".defense")[2]).hide()
-            $($(".defense")[3]).hide()
+            $(".striker,.defense,.midfield").show();
+            $($(".striker")[1]).hide();
+            $($(".midfield")[3]).hide();
+            $($(".defense")[2]).hide();
+            $($(".defense")[3]).hide();
             break;
         case "8":
-            $(".striker,.defense,.midfield").show()
-            $($(".striker")[1]).hide()
-            $($(".midfield")[3]).hide()
-            $($(".defense")[3]).hide()
+            $(".striker,.defense,.midfield").show();
+            $($(".striker")[1]).hide();
+            $($(".midfield")[3]).hide();
+            $($(".defense")[3]).hide();
             break;
         case "9":
-            $(".striker,.defense,.midfield").show()
-            $($(".striker")[1]).hide()
-            $($(".defense")[3]).hide()
+            $(".striker,.defense,.midfield").show();
+            $($(".striker")[1]).hide();
+            $($(".defense")[3]).hide();
             break;
         case "10":
-            $(".striker,.defense,.midfield").show()
-            $($(".striker")[1]).hide()
+            $(".striker,.defense,.midfield").show();
+            $($(".striker")[1]).hide();
             break;
         default:
-            $(".striker,.defense,.midfield").show()
+            $(".striker,.defense,.midfield").show();
       };
     })
 
     // Bench change
     $(".bench-input").on("change",function(){
-          $(".bench-input").hide()
+          $(".bench-input").hide();
           $(".bench").hide();
           var count = $(".bench-input").val()
           for (var i = 0; i < count; i++) {
@@ -384,25 +382,25 @@
     //default bench
     $(".bench").hide();
     for (var i = 0; i < 4; i++) {
-      $($(".bench")[i]).show()
+      $($(".bench")[i]).show();
     };
 
     // autofill
     $("#autofill").click(function(){
       for (var i = 0; i < $(".player").length; i++) {
-        var player = $(".player")[i].firstChild;
-        $(player).attr("src","images/"+(Math.round(Math.random()*(10)+1))+".jpg")
+        var player = $(".player")[i];
+        $(player).css("background-image","url(images/"+(Math.round(Math.random()*(10)+1))+".jpg)")
       };
     })
     // close setup
     $(".close").click(function(){
-      var clicked = this
+      var clicked = this;
       $($(clicked).parent()).hide()
       $("#help").css("background-color","buttonface");
     })
     // open setup (edit formation)
     $("#edit-info").click(function(){
-      $(".setup").show()
+      $(".setup").show();
     })
     // help
     // $(".help").hide();
@@ -420,23 +418,27 @@
     <script type="text/javascript">
       //player image change
       $(".player").click(function(){
-        var player = this
-        var playerOptions = $('<div>').attr('class','player-options')
-        var close = $("<span>").attr("class","close").html("x")
-        $(playerOptions).append(close)
-        $(playerOptions).css("width","200px").css("height","50px").css("position","absolute").css("z-index","5000").css('top',$(player.firstChild).position().top-100).css('left',$(player.firstChild).position().left).css('background-color',"white").css("border","2px solid black").css("border-radius","5px").css("padding","2px")
-        var fileSelect = $('<input>').attr("type","file")
-        $(playerOptions).append(fileSelect)
-        $(player).append(playerOptions)
+        var player = this;
+        var playerOptions = $('<div>').attr('class','player-options');
+        var close = $("<span>").attr("class","close").html("x");
+        $(playerOptions).append(close);
+        $(playerOptions).css("width","200px").css("height","50px").css("position","absolute").css("z-index","5000").css('background-color',"white").css("border","2px solid black").css("border-radius","5px").css("padding","2px")
+        var fileSelect = $('<input>').attr("type","file");
+        $(playerOptions).append(fileSelect);
+        $(player).append(playerOptions);
 
         $(fileSelect).change(function(){
           var reader = new FileReader();
-          reader.onload = (function(aImg) { return function(e) { aImg.src = e.target.result; }; })(player.firstChild);
+          reader.onload = (function(item) { 
+            return function(e) { 
+              $(item).css("background-image","url('" + e.target.result + "')" );
+            }; 
+          })(player);
           reader.readAsDataURL($(fileSelect)[0].files[0])
-          $(".player-options").remove()
+          $(".player-options").remove();
         })
         $(".close").click(function(){
-          var close = this
+          var close = this;
           setTimeout(function(){
             $(".player-options").remove()
           },50)

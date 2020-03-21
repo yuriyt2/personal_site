@@ -17,7 +17,7 @@ window.onload = function(){
       content.classList.add('move');
       nonActiveList.style.display = 'none';
       activeList.style.display = 'block';
-      activeList.style.animation = 'backcolor 2000ms forwards';
+      activeList.style.animation = 'backcolor 1000ms forwards';
     }
     contactLink.addEventListener('click',function(){
       moveNav(contactLink,projectsLink,contactList,projectsList)
@@ -28,7 +28,7 @@ window.onload = function(){
     projectsLink1.addEventListener('click',function(){
       moveNav(projectsLink,contactLink,projectsList,contactList)
     });
-    navLinks.style.animation = "backcolor 2000ms"
+    navLinks.style.animation = "backcolor 1000ms"
     navLinks.style['animation-fill-mode'] = "forwards"
     navLinks.style['animation-delay'] = "500ms"
 

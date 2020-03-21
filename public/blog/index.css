@@ -47,7 +47,7 @@ ul {
   width: 100%;
   border: 3px double rgba(55, 55, 55, 0.5);
   display: block;
-  opacity: .9;
+  opacity: 1;
 }
 
 .details {
@@ -60,9 +60,12 @@ ul {
 .right {
   float: right;
 }
-.entry:hover a>img {
-	opacity: 1;
+.entry:hover {
+	opacity: 0.95;
+  width: 100.5%;
+  margin-left: -.25%;
 }
+
 
 
 @media (max-width: 1150px) {

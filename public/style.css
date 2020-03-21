@@ -4,7 +4,9 @@ body {
 	font-family: 'Raleway', sans-serif;
 	margin-top: 0px;
 	font-size: 1.2em;
+	overflow: hidden;
 }
+
 @keyframes backcolor {
 	0% {
 		opacity: 0;
@@ -21,14 +23,15 @@ h1 {
 
 .hr {
 	width: 15px;
-	height: 99.8%;
+	height: 100%;
 	left: 7%;
 	background-color:	white;
 	position: absolute;
 	margin-top: 0px;
 	margin-bottom: 0px;
+	padding-top: 0px;
 	opacity: 0;
-	animation: backcolor 3300ms;
+	animation: backcolor 1000ms;
 	animation-delay: 200ms;
 	animation-fill-mode: forwards;
 }
@@ -62,7 +65,6 @@ h1 {
 
 .nav-links>li {
 	display: inline;
-	margin-top: 3px;
 	margin-right: 22px;
 	font-size: 1.6em;
 	color: rgba(255, 255, 255, 0.7);
@@ -87,7 +89,6 @@ h1 {
 
 .contact-links>li {
 	display: inline;
-	margin-top: 3px;
 	margin: 10px;
 	margin-left: 40px;
 }
@@ -173,7 +174,7 @@ img	{
 	opacity: 1;
 }
 
-@media (max-width: 1190px) {
+@media (max-width: 1200px) {
 	.projects-list>li>a>img {
 		width: 200px;
 		height: 125px;
@@ -192,7 +193,10 @@ img	{
 	}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
+	.hr {
+		width: 10px;
+	}
 	.projects-list>li>a>img {
 		width: 170px;
 		height: 105px;
@@ -211,7 +215,7 @@ img	{
 	}
 }
 
-@media (max-width: 750px) {
+@media (max-width: 800px) {
 	.projects-list>li>a>img {
 		width: 180px;
 		height: 125px;
@@ -241,7 +245,10 @@ img	{
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
+	.hr {
+		width: 5px;
+	}
 	body {
 		font-size: .7em;
 	}

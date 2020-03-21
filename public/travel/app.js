@@ -91,7 +91,8 @@ var resizeMap = function(){
 }
 
 var setUpPage = function () {
-	$(".loading").remove();
+  $(".loading").remove();
+  $(".selectors").show();
   setIndex();
 }
 
